@@ -494,6 +494,12 @@ background: var(--akcent-color);
     line-height: 2;
     letter-spacing: 0.06em;
 }
+.project-text {
+    color: var(--secondary-color);
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.03em;
+}
 .project-boder{
     padding: 20px 24px;
     border-right-width: 1px;
