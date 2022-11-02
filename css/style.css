@@ -494,40 +494,6 @@ background: var(--akcent-color);
     line-height: 2;
     letter-spacing: 0.06em;
 }
-.overlay{
-    position:relative;
-    overflow: hidden;
-}
-.overlay::before{
-    position: absolute;
-    content: '';
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    background-color: var(--akcent-color-transparency);
-    opacity: 0;
-}
-.overlay:hover::before,.overlay:focus::before,.overlay-text:hover,.overlay-text:focus{
-    opacity: 1;
-}
-
-.overlay-text{
-    position: absolute;
-    top: 64px;
-    left: 24px;
-    opacity: 0;
-
-    color: var(--white-color);
-    font-size: 18px;
-    line-height: 1.56;
-    letter-spacing: 0.03em;
-}
-.project-text{
-    color: var(--secondary-color);
-    font-size: 16px;
-    line-height: 1.88;
-    letter-spacing: 0.03em;
-}
 .project-boder{
     padding: 20px 24px;
     border-right-width: 1px;
@@ -540,4 +506,21 @@ background: var(--akcent-color);
     border-bottom-style: solid;
     border-bottom-color: #EEEEEE;
 
+}
+.overlay{
+    position: relative;
+     overflow: hidden; 
+
+}
+.overlay-hover{
+    transform: translateY(100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:var(--akcent-color-transparency);
+}
+.overlay:hover>.overlay-hover{
+    transform: translateY(0);
 }
