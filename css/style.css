@@ -38,6 +38,18 @@ ul,h1,h2,h3,h4,h5,h6,p{
     margin: 0;
     padding: 0;
 }
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
 img {
     display: block;
 }
@@ -96,6 +108,8 @@ img {
     margin-left: 91px;
 }
 .site-nav{
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
@@ -116,6 +130,8 @@ img {
 margin-left: 50px;
 }
 .contacts-header {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     align-items: center;
     display: flex;
     padding-top: 32px;
@@ -166,6 +182,8 @@ margin-left: 50px;
 }
 
 .hero-button{
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     border-radius: 4px;
     padding: 10px 32px;
     background-color: var(--akcent-color);
@@ -223,18 +241,6 @@ padding-top: 0;
     font-size: 14px;
     line-height: 1.7;
     letter-spacing: 0.03em;
-}
-.visually-hidden{
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    margin: -1px;
 }
 /*Чим займаємося*/
 .item{
@@ -337,6 +343,9 @@ flex-basis: calc((100% - 90px) / 4);
     margin-top: 16px;
 }
 .social-icons{
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+ 
+
     fill: var(--icon-color);
     display: block;
     width: 44px;
@@ -355,6 +364,8 @@ flex-basis: calc((100% - 90px) / 4);
 
 }
 .customers-icon{
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -381,6 +392,8 @@ flex-basis: calc((100% - 90px) / 4);
 }
 /*Футер*/
 .footer-social-icon{
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     display: block;
     border-radius: 50%;
     padding: 12px;
@@ -434,6 +447,8 @@ address{
     line-height:1.71;
 }
 .footer-contacts{
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     color:var(--footer-contact-color) ;
     letter-spacing: 0.03em;
     line-height:1.71;
@@ -445,12 +460,16 @@ address{
 /*Портфоліо*/
 /*Проекти*/
 .filter-button{
+transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 padding: 6px 25px;
 border-radius: 4px ;
 color: var(--main-color);
 border-color: transparent;
 cursor: pointer;
-background: var(--background-team);
+background-color: var(--background-team);
 font-family: inherit;
 font-weight: 500;
 font-size: 16px;
@@ -480,6 +499,8 @@ background: var(--akcent-color);
  flex-basis:calc((100% - 60px) / 3) ; 
 }
 .project-list{
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     display: block;
 }
 .project-list:hover, .project-list:focus{
