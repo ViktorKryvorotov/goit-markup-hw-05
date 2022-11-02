@@ -516,7 +516,6 @@ background: var(--akcent-color);
 .overlay{
     position: relative;
     overflow: hidden; 
-
 }
 .overlay-hover{
     
