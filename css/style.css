@@ -16,6 +16,7 @@
     --button-hover:#188CE8;
     --footer-contact-color:rgba(255, 255, 255, 0.6);
     --icon-color: #AFB1B8;
+    --akcent-color-transparency:rgba(33, 150, 243, 0.9);
 
 }
 body{
@@ -33,7 +34,7 @@ body{
     text-decoration: none;
     font-style: normal;
 }
-ul,h1,h2,h3,p{
+ul,h1,h2,h3,h4,h5,h6,p{
     margin: 0;
     padding: 0;
 }
@@ -47,6 +48,21 @@ img {
     padding-right: 15px;
     width: 1200px;
     /* outline: 2px dashed blueviolet; */
+}
+.current {
+    position: relative;
+    color: var(--akcent-color);
+}
+
+.current::after {
+    content: '';
+    position: absolute;
+    display: block;
+    bottom: -1px;
+    width: 100%;
+    height: 4px;
+    background-color: var(--akcent-color);
+    border-radius: 2px;
 }
 
  /*Шапка сайту*/
@@ -221,6 +237,28 @@ padding-top: 0;
     margin: -1px;
 }
 /*Чим займаємося*/
+.item{
+    position: relative;
+}
+.tittle-text{
+    position: absolute;
+    bottom: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    background-color:  rgba(47, 48, 58, 0.8);
+
+    color: var(--white-color);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
 
 .section-tittle{
     margin-top: 0;
@@ -431,9 +469,6 @@ background: var(--akcent-color);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
-
-    /* background-color: tomato; */
 }
 
 .project{
@@ -459,7 +494,34 @@ background: var(--akcent-color);
     line-height: 2;
     letter-spacing: 0.06em;
 }
+.overlay{
+    position:relative;
+    overflow: hidden;
+}
+.overlay::before{
+    position: absolute;
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-color: var(--akcent-color-transparency);
+    opacity: 0;
+}
+.overlay:hover::before,.overlay:focus::before,.overlay-text:hover,.overlay-text:focus{
+    opacity: 1;
+}
 
+.overlay-text{
+    position: absolute;
+    top: 64px;
+    left: 24px;
+    opacity: 0;
+
+    color: var(--white-color);
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+}
 .project-text{
     color: var(--secondary-color);
     font-size: 16px;
@@ -478,7 +540,4 @@ background: var(--akcent-color);
     border-bottom-style: solid;
     border-bottom-color: #EEEEEE;
 
-}
-.current{
-    color: var(--akcent-color);
 }
